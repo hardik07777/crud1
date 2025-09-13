@@ -12,7 +12,7 @@ const Footer = ({ text }) => {
                    shadow-md transition transform hover:scale-105 hover:bg-pink-200 
                    dark:hover:bg-gray-700"
       >
-        {text} 🌸✨
+        {text} 
       </a>
     </footer>
   );
