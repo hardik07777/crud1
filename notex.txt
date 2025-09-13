@@ -1,0 +1,23 @@
+first we will do npm init -y in the root of project{for easy deployment}
+installing express , dotenv and mongodb
+// creating server .js
+type module to use import export syntax
+now making the database through monfo db -> create project -> create cluster -> copy password -> copy the string 
+in mongodb under network acess allow from anywhere
+if one want to see the connection string in the .env file then we have to import the dotenv file and then config it
+then make a folder named config , under it make a file db.js to connect the databse
+make schema under the model folder {convention -> name of the file is always starts with capital }
+we will then make model 
+
+////// very important  -> when we want to make something then we will use post method
+ see the image in public to understand the usage of api 
+server.js se request jaegi routes wale folder me and to make code compact uske aage ki functionality i have written inside controllers
+
+
+
+frontend 
+in frontend while doing npm vite@latest . // . se vit eka alag se folder nahi banega 
+chakra aui install 
+
+
+if we want /api to prefix with localhost thing then in vite cofig make a proxy // check in code
