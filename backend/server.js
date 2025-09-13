@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 // middleware (must come after app is declared)
-app.use(cors);
+app.use(cors());
 
 app.use(express.json()); // accept JSON in req.body
 
