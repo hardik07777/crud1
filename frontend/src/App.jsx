@@ -3,6 +3,7 @@ import CreatePage from "./pages/CreatePage";
 import Navbar from "./components/mycomponents/Navbar";
 import HomePage from "./pages/Homepage";
 import "./index.css";
+import Footer from "./components/mycomponents/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
       </Routes>
+      <Footer text = "KYA KOI CUTIE MUJHE JOB DENA CHAHEGA 😘"></Footer>
     </div>
   );
 }
