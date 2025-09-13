@@ -10,11 +10,7 @@ dotenv.config();
 const app = express();
 
 // middleware (must come after app is declared)
-app.use(cors({
-  origin: "https://crud1-bice.vercel.app", // your Vercel frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type"],
-}));
+app.use(cors);
 
 app.use(express.json()); // accept JSON in req.body
 
