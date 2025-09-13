@@ -1,4 +1,5 @@
 import { create } from "zustand";
+const API_BASE = "https://crud1-39jq.onrender.com"; // your Render backend URL
 
 export const useProductStore = create((set) => ({
   products: [],
@@ -8,7 +9,7 @@ export const useProductStore = create((set) => ({
     if (!newProduct.name || !newProduct.image || !newProduct.price) {
       return { success: false, message: "Please fill in all fields." };
     }
-    const res = await fetch("/api/product", {
+    const res = await fetch(`${API_BASE}/api/product`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newProduct),
@@ -19,13 +20,13 @@ export const useProductStore = create((set) => ({
   },
 
   fetchProducts: async () => {
-    const res = await fetch("/api/product");
+    const res = await fetch(`${API_BASE}/api/product`);
     const data = await res.json();
     set({ products: data.data });
   },
 
   deleteProduct: async (pid) => {
-    const res = await fetch(`/api/product/${pid}`, { method: "DELETE" });
+    const res = await fetch(`${API_BASE}/api/product/${pid}`, { method: "DELETE" });
     const data = await res.json();
     if (!data.success) return { success: false, message: data.message };
 
@@ -37,7 +38,7 @@ export const useProductStore = create((set) => ({
   },
 
   updateProduct: async (pid, updatedProduct) => {
-    const res = await fetch(`/api/product/${pid}`, {
+    const res = await fetch(`${API_BASE}/api/product/${pid}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedProduct),

@@ -4,6 +4,11 @@ import dotenv from "dotenv";
 import { connectDb } from "./config/db.js";
 import productroutes from "./routes/product.js"
 dotenv.config();
+app.use(cors({
+  origin: "https://crud1-bice.vercel.app", // your Vercel frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+}));
 
 const app = express();
 app.use(express.json()); // this will help us to accept json data in the req.body
