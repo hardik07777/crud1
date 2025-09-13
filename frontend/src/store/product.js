@@ -1,5 +1,5 @@
 import { create } from "zustand";
-const API_BASE = "https://crud1-2.onrender.com/"; // your Render backend URL
+const API_BASE = "https://crud1-2.onrender.com"; // your Render backend URL
 
 export const useProductStore = create((set) => ({
   products: [],
